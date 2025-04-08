@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "programs",
+  "info": {
+    "singularName": "program",
+    "pluralName": "programs",
+    "displayName": "Program",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Date": {
+      "type": "date",
+      "default": "2025-10-11",
+      "required": true
+    },
+    "StartHour": {
+      "type": "time",
+      "default": "10:00:00.000",
+      "required": true
+    },
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "ShortDescript": {
+      "type": "text"
+    },
+    "Location": {
+      "type": "enumeration",
+      "enum": [
+        "Scène Principal",
+        "Scène Animation",
+        "Salon",
+        "En ligne"
+      ]
+    }
+  }
+}
