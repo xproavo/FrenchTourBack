@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "enter_tickets",
+  "info": {
+    "singularName": "enter-ticket",
+    "pluralName": "enter-tickets",
+    "displayName": "EnterTicket"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "TicketName": {
+      "type": "string"
+    },
+    "Descript": {
+      "type": "text"
+    },
+    "Price": {
+      "type": "decimal"
+    }
+  }
+}

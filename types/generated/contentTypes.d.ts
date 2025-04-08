@@ -502,6 +502,36 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiEnterTicketEnterTicket extends Struct.CollectionTypeSchema {
+  collectionName: 'enter_tickets';
+  info: {
+    displayName: 'EnterTicket';
+    pluralName: 'enter-tickets';
+    singularName: 'enter-ticket';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Descript: Schema.Attribute.Text;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::enter-ticket.enter-ticket'
+    > &
+      Schema.Attribute.Private;
+    Price: Schema.Attribute.Decimal;
+    publishedAt: Schema.Attribute.DateTime;
+    TicketName: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
   collectionName: 'globals';
   info: {
@@ -1086,6 +1116,7 @@ declare module '@strapi/strapi' {
       'api::article.article': ApiArticleArticle;
       'api::author.author': ApiAuthorAuthor;
       'api::category.category': ApiCategoryCategory;
+      'api::enter-ticket.enter-ticket': ApiEnterTicketEnterTicket;
       'api::global.global': ApiGlobalGlobal;
       'api::program.program': ApiProgramProgram;
       'plugin::content-releases.release': PluginContentReleasesRelease;
