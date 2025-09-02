@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "exposants",
+  "info": {
+    "singularName": "exposant",
+    "pluralName": "exposants",
+    "displayName": "Exposant",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Descript": {
+      "type": "text"
+    },
+    "URL": {
+      "type": "string"
+    },
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::exposant-category.exposant-category"
+    }
+  }
+}

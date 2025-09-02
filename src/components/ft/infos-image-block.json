@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_ft_infos_image_blocks",
+  "info": {
+    "displayName": "InfosImageBlock",
+    "icon": "apps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Categorie": {
+      "type": "enumeration",
+      "enum": [
+        "Exposant",
+        "Animation",
+        "Autre"
+      ]
+    },
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

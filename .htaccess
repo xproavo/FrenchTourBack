@@ -1,0 +1,7 @@
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION BEGIN
+PassengerAppRoot "/home/goth8310/frenchtour.okodev.fr"
+PassengerBaseURI "/"
+PassengerNodejs "/home/goth8310/nodevenv/frenchtour.okodev.fr/22/bin/node"
+PassengerAppType node
+PassengerStartupFile server.js
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION END

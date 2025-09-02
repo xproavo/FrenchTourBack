@@ -1,0 +1,17 @@
+{
+  "kind": "collectionType",
+  "collectionName": "exposant_categories",
+  "info": {
+    "singularName": "exposant-category",
+    "pluralName": "exposant-categories",
+    "displayName": "ExposantCategory"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string"
+    }
+  }
+}

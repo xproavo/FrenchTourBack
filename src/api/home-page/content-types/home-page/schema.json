@@ -1,0 +1,37 @@
+{
+  "kind": "singleType",
+  "collectionName": "home_pages",
+  "info": {
+    "singularName": "home-page",
+    "pluralName": "home-pages",
+    "displayName": "HomePage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "IntroTitle": {
+      "type": "string"
+    },
+    "IntroDescript": {
+      "type": "text"
+    },
+    "IntroImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "ProgramResume": {
+      "type": "component",
+      "repeatable": true,
+      "component": "ft.infos-image-block"
+    }
+  }
+}

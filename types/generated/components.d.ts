@@ -1,5 +1,20 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface FtInfosImageBlock extends Struct.ComponentSchema {
+  collectionName: 'components_ft_infos_image_blocks';
+  info: {
+    description: '';
+    displayName: 'InfosImageBlock';
+    icon: 'apps';
+  };
+  attributes: {
+    Categorie: Schema.Attribute.Enumeration<['Exposant', 'Animation', 'Autre']>;
+    Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.Required;
+    Title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface SharedMedia extends Struct.ComponentSchema {
   collectionName: 'components_shared_media';
   info: {
@@ -65,6 +80,7 @@ export interface SharedSlider extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'ft.infos-image-block': FtInfosImageBlock;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
